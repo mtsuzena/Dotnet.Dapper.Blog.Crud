@@ -69,5 +69,17 @@ namespace Dotnet.Dapper.Blog.Crud.Repositories
 
             await _connection.ExecuteAsync(insert, new { PostId = postId, TagId = tagId });
         }
+
+        public async void DeletePostTag(int postId, int tagId)
+        {
+            var delete = @"
+                DELETE FROM 
+	                [PostTag]
+                WHERE 
+	                PostId = @PostId
+	                AND TagId = @TagId";
+
+            await _connection.ExecuteAsync(delete, new { PostId = postId,TagId = tagId });      
+        }            
     }
 }

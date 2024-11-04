@@ -21,8 +21,7 @@ namespace Dotnet.Dapper.Blog.Crud.Screens
             Console.WriteLine("3 - Role Management");
             Console.WriteLine("4 - Category Management");
             Console.WriteLine("5 - Tag Management");
-            Console.WriteLine("6 - Link User/Role");
-            Console.WriteLine("7 - Link Post/Tag");
+            Console.WriteLine("6 - Link Management");
             Console.WriteLine();
 
             try
@@ -55,12 +54,9 @@ namespace Dotnet.Dapper.Blog.Crud.Screens
                     break;
                 case 5:
                     MenuTagScreen.Load();
-                    break;
+                    break;          
                 case 6:
-                    UserRoleLinkScreen.Load();
-                    break;
-                case 7:
-                    PostTagLinkScreen.Load();
+                    LinkManagementScreen.Load();
                     break;
                 default:
                     Console.WriteLine("Invalid option. Please select a valid number.");
