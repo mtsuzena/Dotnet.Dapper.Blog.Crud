@@ -56,7 +56,7 @@ namespace Dotnet.Dapper.Blog.Crud.Screens
                     MenuTagScreen.Load();
                     break;          
                 case 6:
-                    LinkManagementScreen.Load();
+                    MenuLinkScreen.Load();
                     break;
                 default:
                     Console.WriteLine("Invalid option. Please select a valid number.");

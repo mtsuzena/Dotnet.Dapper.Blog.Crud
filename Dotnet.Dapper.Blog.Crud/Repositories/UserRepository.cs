@@ -2,6 +2,8 @@
 using Dapper.Contrib.Extensions;
 using Dotnet.Dapper.Blog.Crud.Models;
 using Microsoft.Data.SqlClient;
+using System.Collections.Generic;
+using System.Data.Common;
 using System.Reflection;
 
 namespace Dotnet.Dapper.Blog.Crud.Repositories
@@ -58,6 +60,17 @@ namespace Dotnet.Dapper.Blog.Crud.Repositories
                 )";
 
             await _connection.ExecuteAsync(insert, new { UserId = userId, RoleId = roleId });
+        }
+        public async void DeleteUserRole(int userId, int roleId)
+        {
+            var delete = @"
+                DELETE FROM 
+	                [UserRole]
+                WHERE 
+	                UserId = @UserId
+	                AND RoleId = @RoleId";
+
+            await _connection.ExecuteAsync(delete, new { UserId = userId, RoleId = roleId });
         }
     }
 }
