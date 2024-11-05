@@ -33,7 +33,5 @@ namespace Dotnet.Dapper.Blog.Crud.Screens.LinkScreens
                 Console.WriteLine(ex.Message);
             }
         }
-
     }
 }
-

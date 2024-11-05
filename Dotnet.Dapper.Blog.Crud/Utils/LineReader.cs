@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Dotnet.Dapper.Blog.Crud.Utils
+﻿namespace Dotnet.Dapper.Blog.Crud.Utils
 {
     public static class LineReader
     {
